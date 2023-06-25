@@ -1,0 +1,47 @@
+{
+  "name": "@qwik-microfrontends/source",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "serve:all": "npx nx run-many --parallel=4 --target=serve --projects=host,home,features,checkout",
+    "build:all": "npx nx  run-many --targets=lint,test,build --all",
+    "preview:host": "npx nx run host:preview",
+    "preview:home": "npx nx run home:preview",
+    "preview:features": "npx nx run features:preview",
+    "preview:checkout": "npx nx run checkout:preview"
+  },
+  "private": true,
+  "dependencies": {
+    "qwik-nx": "1.0.3"
+  },
+  "devDependencies": {
+    "@builder.io/qwik": "~1.1.4",
+    "@builder.io/qwik-city": "~1.1.4",
+    "@nx/eslint-plugin": "16.2.2",
+    "@nx/js": "16.2.2",
+    "@nx/linter": "16.2.2",
+    "@nx/vite": "16.2.2",
+    "@nx/workspace": "16.2.2",
+    "@typescript-eslint/eslint-plugin": "^5.59.7",
+    "@typescript-eslint/parser": "^5.59.7",
+    "@vitest/ui": "^0.31.1",
+    "autoprefixer": "~10.4.14",
+    "eslint": "~8.41.0",
+    "eslint-config-prettier": "8.8.0",
+    "eslint-plugin-qwik": "~1.1.4",
+    "jsdom": "~22.1.0",
+    "node-fetch": "~3.3.1",
+    "nx": "16.2.2",
+    "postcss": "~8.4.24",
+    "prettier": "^2.8.8",
+    "sass": "~1.62.1",
+    "tailwindcss": "~3.3.2",
+    "typescript": "~5.0.4",
+    "undici": "^5.22.1",
+    "vite": "^4.3.9",
+    "vite-plugin-dts": "~1.7.1",
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-tsconfig-paths": "~4.2.0",
+    "vitest": "^0.31.1"
+  }
+}
